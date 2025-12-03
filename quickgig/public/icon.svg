@@ -1,0 +1,16 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="512" height="512" fill="#FFFFFF"/>
+
+  <!-- Outer square border (2px) -->
+  <rect x="76" y="76" width="360" height="360" stroke="#000000" stroke-width="8" fill="none"/>
+
+  <!-- Center black square -->
+  <rect x="196" y="196" width="120" height="120" fill="#000000"/>
+
+  <!-- Top-right corner accent -->
+  <rect x="396" y="76" width="40" height="40" fill="#000000"/>
+
+  <!-- Bottom-left corner accent -->
+  <rect x="76" y="396" width="40" height="40" fill="#000000"/>
+</svg>

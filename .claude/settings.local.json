@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout /t 5 /nobreak)",
+      "Bash(taskkill /F /PID 28344)",
+      "Bash(taskkill:*)",
+      "Bash(powershell -Command \"Get-Process node | Stop-Process -Force\")",
+      "Bash(npm run dev:all:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git add:*)",
+      "Bash(git rev-parse:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

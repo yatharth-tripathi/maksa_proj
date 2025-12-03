@@ -1,0 +1,14 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+	worktree = ../../../../../../../../../../../contracts/lib/openzeppelin-contracts/lib/forge-std/lib/ds-test
+[remote "origin"]
+	url = https://github.com/dapphub/ds-test
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master

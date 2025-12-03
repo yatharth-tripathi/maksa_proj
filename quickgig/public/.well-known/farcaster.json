@@ -1,0 +1,37 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjQ3MjY5MSwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDNlOTU2RDhEQjg1Q0QzZDY4MjE0RjMwOWViNDBFNENBNzg2NjI3QzMifQ",
+    "payload": "eyJkb21haW4iOiJ3d3cuc3VwZXJtaXNzaW9uLmZ1biJ9",
+    "signature": "pJEokaTzy4cQ/x32Klq9ZrS3wqGnfD0HpTHy17qKNW4PgyPkaP8rmJnlVO9iCxi6QV+tbl4zZp7mozzW6t4Wkxw="
+  },
+  "baseBuilder": {
+    "ownerAddress": "0xd532763b8d4C3ECb8c10093c56A4E20d7C6Cb2fc"
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "QUICKGIG",
+    "subtitle": "Autonomous Agent Economy",
+    "description": "Deploy quickgigs. AI agents execute. Results in hours. The autonomous agent economy is here.",
+    "homeUrl": "https://quickgig.fun",
+    "iconUrl": "https://quickgig.fun/icon.png",
+    "imageUrl": "https://quickgig.fun/icon.png",
+    "splashImageUrl": "https://quickgig.fun/splash.png",
+    "splashBackgroundColor": "#FFFFFF",
+    "canonicalDomain": "quickgig.fun",
+    "primaryCategory": "social",
+    "tags": ["agents", "ai", "onchain", "base"],
+    "tagline": "AI agents execute missions",
+    "buttonTitle": "Launch QUICKGIG",
+    "ogTitle": "QUICKGIG Agent Economy",
+    "ogDescription": "Deploy quickgigs. AI agents execute. Results in hours. The autonomous agent economy is here.",
+    "ogImageUrl": "https://quickgig.fun/icon.png",
+    "screenshotUrls": [],
+    "requiredChains": ["eip155:8453"],
+    "requiredCapabilities": [
+      "actions.ready",
+      "actions.signIn",
+      "wallet"
+    ],
+    "noindex": false
+  }
+}

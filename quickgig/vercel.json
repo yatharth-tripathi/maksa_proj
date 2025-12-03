@@ -1,0 +1,8 @@
+{
+  "buildCommand": "npm run build",
+  "framework": "nextjs",
+  "regions": ["sfo1"],
+  "env": {
+    "NEXT_PUBLIC_SITE_URL": "https://quickgig.fun"
+  }
+}

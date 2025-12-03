@@ -1,0 +1,811 @@
+{
+  "abi": [
+    {
+      "type": "constructor",
+      "inputs": [
+        {
+          "name": "_bountyEscrow",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "_optimisticOracle",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "_defaultBond",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "_livenessPeriod",
+          "type": "uint64",
+          "internalType": "uint64"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "assertionResolvedCallback",
+      "inputs": [
+        {
+          "name": "assertionId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "assertedTruthfully",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "authorizeDisputer",
+      "inputs": [
+        {
+          "name": "disputer",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "authorizedDisputers",
+      "inputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "bountyAssertions",
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "bountyEscrow",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "createDispute",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "client",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "worker",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "assertionId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "defaultBond",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "defaultPolicy",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "blockAssertion",
+          "type": "bool",
+          "internalType": "bool"
+        },
+        {
+          "name": "arbitrateViaEscalationManager",
+          "type": "uint64",
+          "internalType": "uint64"
+        },
+        {
+          "name": "discardOracle",
+          "type": "bool",
+          "internalType": "bool"
+        },
+        {
+          "name": "validateDisputers",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "disputes",
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "client",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "worker",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "assertionId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "resolved",
+          "type": "bool",
+          "internalType": "bool"
+        },
+        {
+          "name": "clientWon",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getAssertionId",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "assertionId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getAssertionPolicy",
+      "inputs": [
+        {
+          "name": "assertionId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "policy",
+          "type": "tuple",
+          "internalType": "struct QuickGigEscalationManager.AssertionPolicy",
+          "components": [
+            {
+              "name": "blockAssertion",
+              "type": "bool",
+              "internalType": "bool"
+            },
+            {
+              "name": "arbitrateViaEscalationManager",
+              "type": "uint64",
+              "internalType": "uint64"
+            },
+            {
+              "name": "discardOracle",
+              "type": "bool",
+              "internalType": "bool"
+            },
+            {
+              "name": "validateDisputers",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getDispute",
+      "inputs": [
+        {
+          "name": "assertionId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "dispute",
+          "type": "tuple",
+          "internalType": "struct QuickGigEscalationManager.DisputeData",
+          "components": [
+            {
+              "name": "bountyId",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "client",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "worker",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "amount",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "assertionId",
+              "type": "bytes32",
+              "internalType": "bytes32"
+            },
+            {
+              "name": "resolved",
+              "type": "bool",
+              "internalType": "bool"
+            },
+            {
+              "name": "clientWon",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getResolution",
+      "inputs": [
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "resolved",
+          "type": "bool",
+          "internalType": "bool"
+        },
+        {
+          "name": "clientBps",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "workerBps",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "isAuthorizedDisputer",
+      "inputs": [
+        {
+          "name": "disputer",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "authorized",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "livenessPeriod",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint64",
+          "internalType": "uint64"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "optimisticOracle",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "owner",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "pause",
+      "inputs": [],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "paused",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "resolveDispute",
+      "inputs": [
+        {
+          "name": "assertionId",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "clientWon",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "revokeDisputer",
+      "inputs": [
+        {
+          "name": "disputer",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "transferOwnership",
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "unpause",
+      "inputs": [],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "updateBountyEscrow",
+      "inputs": [
+        {
+          "name": "newBountyEscrow",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "updateDefaultBond",
+      "inputs": [
+        {
+          "name": "newBond",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "updateLiveness",
+      "inputs": [
+        {
+          "name": "newLiveness",
+          "type": "uint64",
+          "internalType": "uint64"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "updatePolicy",
+      "inputs": [
+        {
+          "name": "newPolicy",
+          "type": "tuple",
+          "internalType": "struct QuickGigEscalationManager.AssertionPolicy",
+          "components": [
+            {
+              "name": "blockAssertion",
+              "type": "bool",
+              "internalType": "bool"
+            },
+            {
+              "name": "arbitrateViaEscalationManager",
+              "type": "uint64",
+              "internalType": "uint64"
+            },
+            {
+              "name": "discardOracle",
+              "type": "bool",
+              "internalType": "bool"
+            },
+            {
+              "name": "validateDisputers",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ]
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "event",
+      "name": "BondUpdated",
+      "inputs": [
+        {
+          "name": "oldBond",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "newBond",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "DisputeCreated",
+      "inputs": [
+        {
+          "name": "assertionId",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "client",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "worker",
+          "type": "address",
+          "indexed": false,
+          "internalType": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "DisputeResolved",
+      "inputs": [
+        {
+          "name": "assertionId",
+          "type": "bytes32",
+          "indexed": true,
+          "internalType": "bytes32"
+        },
+        {
+          "name": "bountyId",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "clientWon",
+          "type": "bool",
+          "indexed": false,
+          "internalType": "bool"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "DisputerAuthorized",
+      "inputs": [
+        {
+          "name": "disputer",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "DisputerRevoked",
+      "inputs": [
+        {
+          "name": "disputer",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "LivenessUpdated",
+      "inputs": [
+        {
+          "name": "oldLiveness",
+          "type": "uint64",
+          "indexed": false,
+          "internalType": "uint64"
+        },
+        {
+          "name": "newLiveness",
+          "type": "uint64",
+          "indexed": false,
+          "internalType": "uint64"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "Paused",
+      "inputs": [
+        {
+          "name": "by",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "PolicyUpdated",
+      "inputs": [
+        {
+          "name": "newPolicy",
+          "type": "tuple",
+          "indexed": false,
+          "internalType": "struct QuickGigEscalationManager.AssertionPolicy",
+          "components": [
+            {
+              "name": "blockAssertion",
+              "type": "bool",
+              "internalType": "bool"
+            },
+            {
+              "name": "arbitrateViaEscalationManager",
+              "type": "uint64",
+              "internalType": "uint64"
+            },
+            {
+              "name": "discardOracle",
+              "type": "bool",
+              "internalType": "bool"
+            },
+            {
+              "name": "validateDisputers",
+              "type": "bool",
+              "internalType": "bool"
+            }
+          ]
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "Unpaused",
+      "inputs": [
+        {
+          "name": "by",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "AlreadyResolved",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "AssertionNotFound",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "ContractPaused",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidAddress",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidAmount",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "NotAuthorizedDisputer",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "Unauthorized",
+      "inputs": []
+    }
+  ]
+}

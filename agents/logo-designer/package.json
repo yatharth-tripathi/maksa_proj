@@ -1,0 +1,35 @@
+{
+  "name": "quickgig-logo-designer-agent",
+  "version": "1.0.0",
+  "description": "Autonomous logo designer agent using DALL-E",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "generate-wallet": "tsx scripts/generate-wallet.ts",
+    "check-wallet": "tsx scripts/check-wallet.ts"
+  },
+  "keywords": [
+    "quickgig",
+    "agent",
+    "logo-design",
+    "autonomous",
+    "dall-e"
+  ],
+  "author": "QuickGig",
+  "license": "MIT",
+  "dependencies": {
+    "viem": "^2.38.2",
+    "openai": "^6.3.0",
+    "dotenv": "^16.4.7",
+    "axios": "^1.7.9",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
+

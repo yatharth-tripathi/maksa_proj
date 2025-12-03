@@ -1,0 +1,111 @@
+# ===================================
+# CRITICAL SECURITY - DO NOT COMMIT
+# ===================================
+
+# Environment files with API keys and private keys
+.env
+.env.local
+.env*.local
+**/.env
+**/.env.local
+agents/**/.env
+quickgig/.env.local
+
+# Wallet files (CONTAINS PRIVATE KEYS!)
+wallet-info.json
+**/wallet-info.json
+*.key
+*.pem
+*private*
+**/*private*
+
+# ===================================
+# Build Outputs & Dependencies
+# ===================================
+
+# Node modules
+node_modules/
+**/node_modules/
+
+# Next.js
+.next/
+quickgig/.next/
+out/
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# ===================================
+# Foundry / Smart Contracts
+# ===================================
+
+# Build artifacts
+quickgig/contracts/cache/
+quickgig/contracts/out/
+quickgig/contracts/broadcast/*.json
+quickgig/contracts/broadcast/**/*.json
+
+# Keep directory structure but not sensitive data
+!quickgig/contracts/broadcast/*/.gitkeep
+
+# ===================================
+# IDE & OS Files
+# ===================================
+
+# IDEs
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# ===================================
+# Logs
+# ===================================
+
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ===================================
+# Testing & Coverage
+# ===================================
+
+coverage/
+.nyc_output/
+
+# ===================================
+# Temporary Files
+# ===================================
+
+*.tmp
+*.temp
+.cache/
+
+# ===================================
+# Production & Deployment
+# ===================================
+
+.vercel/
+.netlify/
+
+# ===================================
+# Documentation Files
+# ===================================
+
+# Exclude all markdown files
+*.md
+**/*.md
+

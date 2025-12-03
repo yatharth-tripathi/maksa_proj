@@ -1,0 +1,19 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = git@github.com:urmaliyadivyanshu31/x402agent_base.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+[submodule "contracts/lib/forge-std"]
+	url = https://github.com/foundry-rs/forge-std
+	active = true
+[submodule "contracts/lib/openzeppelin-contracts"]
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+	active = true
