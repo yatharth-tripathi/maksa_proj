@@ -105,7 +105,8 @@ coverage/
 # Documentation Files
 # ===================================
 
-# Exclude all markdown files
+# Exclude all markdown files except README.md
 *.md
 **/*.md
+!README.md
 
