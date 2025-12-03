@@ -1,8 +1,6 @@
-# QUICKGIG - Trustless Agent Ecosystem
+# QUICKGIG - Decentralized Gig Economy Platform
 
-**The world's first production-ready platform combining ERC-8004 agent discovery with X402 micropayments**
-
-> "8004 solves discovery and trust, x402 the payment level" - ERC-8004 Creator
+**A production-ready platform for AI-powered services with X402 micropayments**
 
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-success)](https://github.com/yourusername/x402agent)
 [![Tests](https://img.shields.io/badge/Tests-25%2F25%20Passing-success)](https://github.com/yourusername/x402agent)
@@ -12,14 +10,12 @@
 
 ## 🎯 What Is This?
 
-QUICKGIG is a **fully functional trustless agent ecosystem** where:
+QUICKGIG is a **decentralized gig economy platform** where:
 
 - **Humans hire AI agents** for tasks (logo design, copywriting, etc.)
-- **AI agents hire other agents** for subtasks (A2A coordination)
 - **All payments are micropayments** using X402 protocol (<2 second settlement)
-- **All agents are discoverable** via ERC-8004 standard
 - **All reputation is on-chain** and portable across platforms
-- **Everything is autonomous** - agents work 24/7 without human intervention
+- **Secure escrow system** for payments and deliverables
 
 **Status**: ✅ **PRODUCTION READY** - Deployed to Base Sepolia, ready for mainnet
 
@@ -33,23 +29,6 @@ QUICKGIG is a **fully functional trustless agent ecosystem** where:
 - On-chain payment verification with security fixes
 - <2 second settlement on Base
 - Session management (in-memory, Redis planned)
-
-### ✅ ERC-8004 Agent Discovery (Complete)
-- Capability-based agent search
-- Agent registration with verification (0.001 ETH fee)
-- Trust scores and reputation tracking
-- Portable identity across platforms
-- 12+ agent capabilities supported
-- Full directory with modal interface
-
-### ✅ Autonomous Agent Framework (Complete)
-- Monitor blockchain for bounties (30s intervals)
-- Evaluate and bid autonomously
-- Execute work with AI (OpenRouter for Llama 3.1, Stable Diffusion XL)
-- Submit deliverables to IPFS (Pinata)
-- Get paid and build reputation
-- Zero human intervention required
-- WebSocket monitoring for real-time updates
 
 ### ✅ Bounty Marketplace (Complete)
 - Create bounties via natural language chat
@@ -76,20 +55,16 @@ x402agent/
 │   ├── app/                     # Next.js 15 pages
 │   │   ├── page.tsx            # Landing page
 │   │   ├── chat/               # AI chat with X402 payments
-│   │   ├── agents/             # Agent directory (modal)
 │   │   ├── bounties/           # Bounty marketplace
-│   │   ├── register/           # Agent registration
 │   │   └── api/                # API routes
 │   ├── components/              # React components
-│   │   ├── ui/                # Brutalist UI components
+│   │   ├── ui/                # UI components
 │   │   ├── chat/              # Chat interface
-│   │   ├── agents/            # Agent discovery
 │   │   ├── transaction/       # Transaction components
 │   │   ├── wallet/            # OnchainKit wallet
 │   │   └── x402/              # Payment modal
 │   ├── lib/                     # Core libraries
 │   │   ├── x402/               # X402 payment layer
-│   │   ├── erc8004/            # ERC-8004 discovery
 │   │   ├── contracts/          # Contract interactions
 │   │   ├── cdp/                # CDP client & WebSocket
 │   │   ├── onchainkit/         # Paymaster config
@@ -98,27 +73,19 @@ x402agent/
 │       └── src/
 │           ├── BountyEscrow.sol
 │           ├── GigEscrow.sol
-│           ├── ERC8004Registry.sol
 │           └── ReputationRegistry.sol
 │
-└── agents/                      # Autonomous agents
-    ├── template/                # Base template for any agent
+└── agents/                      # AI agents
+    ├── template/                # Base template
     │   └── src/
     │       ├── config.ts       # Agent configuration
-    │       ├── logger.ts       # Winston logging
-    │       ├── monitor.ts      # WebSocket monitoring
+    │       ├── logger.ts       # Logging
     │       └── cdp-client.ts   # CDP integration
     └── logo-designer/           # Logo designer agent
-        ├── src/
-        │   ├── index.ts        # Main orchestration
-        │   ├── monitor.ts      # Blockchain watcher
-        │   ├── evaluator.ts    # Bid decision logic
-        │   ├── executor.ts     # Logo generation (OpenRouter)
-        │   └── submitter.ts    # IPFS & blockchain
-        ├── scripts/
-        │   ├── generate-wallet.ts  # Auto wallet creation
-        │   └── check-wallet.ts     # Wallet status check
-        └── README.md
+        └── src/
+            ├── index.ts        # Main entry
+            ├── executor.ts     # Logo generation
+            └── config.ts       # Configuration
 ```
 
 ---
@@ -262,33 +229,17 @@ npm run dev
 8. No additional payment needed for session
 ```
 
-### Agent → Agent (A2A) Flow
-
-```
-1. Logo agent receives bounty for branding
-2. Needs copywriting for tagline
-3. Discovers copywriting agents via ERC-8004
-4. Sends X402 payment request
-5. Copywriting agent responds with tagline
-6. Logo agent completes full deliverable
-7. Both agents get paid from escrow
-```
-
-### Autonomous Bounty Flow
+### Bounty Creation Flow
 
 ```
 1. Client: "I need a logo for my startup, budget $50"
 2. Chat AI creates bounty on-chain
-3. Logo agent detects via WebSocket (< 5 seconds)
-4. Agent evaluates: requirements, budget, competition
-5. Agent bids: $45 (competitive pricing)
-6. Client accepts bid in UI
-7. Agent generates logo with Stable Diffusion XL
-8. Agent uploads to IPFS via Pinata
-9. Agent submits deliverable on-chain
-10. 48h auto-release or client approves
-11. Agent receives $45 USDC automatically
-12. Reputation score updated on-chain
+3. Agent generates logo with AI
+4. Agent uploads to IPFS
+5. Agent submits deliverable on-chain
+6. Client reviews and approves
+7. Agent receives $50 USDC automatically
+8. Reputation score updated on-chain
 ```
 
 ---
@@ -303,9 +254,7 @@ npm run dev
 - **Quality guarantees** with dispute resolution
 
 ### For AI Agents
-- **Earn autonomously** 24/7 without human operators
 - **Build portable reputation** that works anywhere
-- **Hire other agents** for specialized subtasks
 - **Get paid instantly** on deliverable approval
 - **Low fees** (2.5% platform fee only)
 
@@ -322,15 +271,14 @@ npm run dev
 
 | Component | Status | Notes |
 |-----------|--------|-------|
-| **Smart Contracts** | ✅ Complete | 4 contracts, 25/25 tests, Base Sepolia |
-| **X402 Payments** | ✅ Complete | H2AI + A2A, session management, security fixes |
-| **Agent Discovery** | ✅ Complete | ERC-8004 registry, modal UI, search/filter |
+| **Smart Contracts** | ✅ Complete | Escrow, reputation, 25/25 tests, Base Sepolia |
+| **X402 Payments** | ✅ Complete | Micropayments, session management, security fixes |
 | **Bounty System** | ✅ Complete | Create, bid, assign, deliver, approve flows |
 | **Chat Interface** | ✅ Complete | Natural language, intent parsing, X402 integrated |
-| **Autonomous Agents** | ✅ Complete | Template + logo designer, WebSocket monitoring |
+| **AI Agents** | ✅ Complete | Logo designer, copywriter, social media |
 | **OnchainKit** | ✅ Complete | Wallet, transactions, paymaster, CDP APIs |
 | **WebSocket Updates** | ✅ Complete | Real-time bounties, auto-reconnect |
-| **Documentation** | ✅ Complete | Deployment guide, API docs, agent guide |
+| **Documentation** | ✅ Complete | Setup guide, API docs |
 
 ---
 
